@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ETBinding",
+        "repositoryURL": "https://github.com/EtneteraMobile/ETBinding.git",
+        "state": {
+          "branch": null,
+          "revision": "908f6847891f70902a2923ddc3a813a28d24d878",
+          "version": "3.3.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 47;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		52D6D9871BEFF229002C0205 /* ETTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* ETTextField.framework */; };
 		8933C7851EB5B820000D00A4 /* ETTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* ETTextField.swift */; };
 		8933C7901EB5B82D000D00A4 /* ETTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* ETTextFieldTests.swift */; };
+		8E3DBCA2230545E9003F642C /* ETBinding in Frameworks */ = {isa = PBXBuildFile; productRef = 8E3DBCA1230545E9003F642C /* ETBinding */; };
 		8EF313A722FEF2D100280089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF313A622FEF2D100280089 /* AppDelegate.swift */; };
 		8EF313A922FEF2D100280089 /* ExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF313A822FEF2D100280089 /* ExampleController.swift */; };
 		8EF313AC22FEF2D100280089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF313AA22FEF2D100280089 /* Main.storyboard */; };
@@ -18,8 +19,6 @@
 		8EF313B722FEF39700280089 /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF313B622FEF39700280089 /* TextFieldStyle.swift */; };
 		8EF313B822FEF56400280089 /* ETTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* ETTextField.framework */; };
 		8EF313B922FEF56400280089 /* ETTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* ETTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8EF313BF2300355200280089 /* ETBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF313BE2300355200280089 /* ETBinding.framework */; };
-		8EF313C02300399800280089 /* ETBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF313BE2300355200280089 /* ETBinding.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		8EF313B022FEF2D300280089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EF313B222FEF2D300280089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EF313B622FEF39700280089 /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
-		8EF313BE2300355200280089 /* ETBinding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ETBinding.framework; path = Carthage/Build/iOS/ETBinding.framework; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* ETTextField.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ETTextField.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* ETTextFieldTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ETTextFieldTests.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EF313BF2300355200280089 /* ETBinding.framework in Frameworks */,
+				8E3DBCA2230545E9003F642C /* ETBinding in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EF313B822FEF56400280089 /* ETTextField.framework in Frameworks */,
-				8EF313C02300399800280089 /* ETBinding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +170,6 @@
 		8EF313BD2300355200280089 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8EF313BE2300355200280089 /* ETBinding.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,6 +217,9 @@
 			dependencies = (
 			);
 			name = "ETTextField-iOS";
+			packageProductDependencies = (
+				8E3DBCA1230545E9003F642C /* ETBinding */,
+			);
 			productName = ETTextField;
 			productReference = 52D6D97C1BEFF229002C0205 /* ETTextField.framework */;
 			productType = "com.apple.product-type.framework";
@@ -251,7 +250,6 @@
 				8EF313A122FEF2D100280089 /* Frameworks */,
 				8EF313A222FEF2D100280089 /* Resources */,
 				8EF313BC22FEF56400280089 /* Embed Frameworks */,
-				8EF313C2230039F100280089 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -296,6 +294,9 @@
 				Base,
 			);
 			mainGroup = 52D6D9721BEFF229002C0205;
+			packageReferences = (
+				8E3DBCA0230545E9003F642C /* XCRemoteSwiftPackageReference "ETBinding" */,
+			);
 			productRefGroup = 52D6D97D1BEFF229002C0205 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -333,29 +334,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8EF313C2230039F100280089 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ETBinding.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ETBinding.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52D6D9771BEFF229002C0205 /* Sources */ = {
@@ -469,7 +447,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -550,7 +528,11 @@
 				INFOPLIST_FILE = Configs/ETTextField.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ETTextField.ETTextField-iOS";
 				PRODUCT_NAME = ETTextField;
@@ -578,11 +560,16 @@
 				INFOPLIST_FILE = Configs/ETTextField.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ETTextField.ETTextField-iOS";
 				PRODUCT_NAME = ETTextField;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -592,7 +579,11 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Configs/ETTextFieldTests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ETTextField.ETTextField-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -605,10 +596,15 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Configs/ETTextFieldTests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ETTextField.ETTextField-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -633,7 +629,10 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cz.etnetera.Example;
@@ -664,11 +663,15 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cz.etnetera.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -714,6 +717,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E3DBCA0230545E9003F642C /* XCRemoteSwiftPackageReference "ETBinding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EtneteraMobile/ETBinding";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E3DBCA1230545E9003F642C /* ETBinding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E3DBCA0230545E9003F642C /* XCRemoteSwiftPackageReference "ETBinding" */;
+			productName = ETBinding;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52D6D9731BEFF229002C0205 /* Project object */;
 }
